@@ -7,12 +7,13 @@ public class Model {
 
     private Presenter presenter;
     private Ampelphase phase;
-
+    private Logger logger;
 
     public Model(Presenter presenter) {
         this.presenter = presenter;
         phase = Ampelphase.ROT;
         presenter.setAmpelzustand(phase);
+        logger = new FileLogger();
     }
 
     public void weiter() {
@@ -38,7 +39,7 @@ public class Model {
         presenter.setAmpelzustand(phase);
 
         //Zeit und Ampelphase mitloggen
-
+        logger.log(phase);
 
     }
 }
