@@ -36,5 +36,9 @@ public class Model {
 
         }
         presenter.setAmpelzustand(phase);
+
+        //Zeit und Ampelphase mitloggen
+
+
     }
 }
